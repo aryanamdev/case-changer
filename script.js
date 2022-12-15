@@ -2,16 +2,15 @@ let changeButton = document.querySelector("#change-button");
 let changedCases = document.querySelectorAll(".value");
 
 changeButton.addEventListener("click", () => {
-    // selecting the value and trimming the extra spaces
+  // selecting the value and trimming the extra spaces
   let userText = document.querySelector("#user-input").value.trim();
 
-    // checking if the input if null
+  // checking if the input if null
   if (userText.trim() == 0) {
     return;
   }
 
   changedCases.forEach((e) => {
-    
     if (e.classList.contains("camel-case")) {
       let newArray = userText.split(" ");
       let output = newArray[0].toLowerCase();
